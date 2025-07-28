@@ -1,0 +1,23 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #0b74de;
+  color: white;
+  padding: 1rem;
+}
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+#produk {
+  padding: 1rem;
+}
+footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+}

@@ -2,15 +2,17 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/img"
-public_folder: "/img"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
 
 collections:
-  - name: "produk"
-    label: "Produk"
-    folder: "produk"
+  - name: "konten"
+    label: "Konten Publik"
+    folder: "konten"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Nama Produk", name: "title", widget: "string" }
-      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Judul", name: "title", widget: "string" }
+      - { label: "Isi", name: "body", widget: "markdown" }

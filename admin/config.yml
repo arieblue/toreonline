@@ -1,6 +1,10 @@
 backend:
   name: git-gateway
   branch: main
+  identity_url: https://ariestoreonline.netlify.app/.netlify/identity
+  gateway_url: https://ariestoreonline.netlify.app/.netlify/git
+
+local_backend: true
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
@@ -8,11 +12,13 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 
 collections:
-  - name: "konten"
-    label: "Konten Publik"
-    folder: "konten"
+  - name: "produk"
+    label: "Produk"
+    folder: "produk"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Judul", name: "title", widget: "string" }
-      - { label: "Isi", name: "body", widget: "markdown" }
+      - { label: "Nama Produk", name: "title", widget: "string" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
+      - { label: "Gambar", name: "image", widget: "image" }
+      - { label: "Harga", name: "harga", widget: "string" }
